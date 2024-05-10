@@ -1,7 +1,6 @@
 import React from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import Image from "next/image";
 
 const Header = () => {
   return (
@@ -30,7 +29,7 @@ const Header = () => {
         </div>
       </div>
       <div>
-        <Image fill src="/header_img.jpg" alt="yyftygvud" />
+        <img src="/header_img.jpg" alt="yyftygvud" />
       </div>
     </div>
   );

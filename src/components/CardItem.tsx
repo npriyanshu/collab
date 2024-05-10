@@ -3,7 +3,6 @@ import { Card, User } from "@/interfaces";
 import { Draggable } from "@hello-pangea/dnd";
 import React, { useState } from "react";
 import CardModal from "./CardModal";
-import Image from "next/image";
 
 const CardItem = ({ card, index }: { card: Card; index: number }) => {
   const [isModal, setIsModal] = useState(false);
@@ -23,8 +22,7 @@ const CardItem = ({ card, index }: { card: Card; index: number }) => {
             <div className="mt-3 flex justify-end gap-2">
               {card?.users?.map((user: User) => (
                 <div className="" key={user.id}>
-                  <Image
-                  fill
+                  <img
                   src={user.image as string}
                   key={user?.id}
                   alt=""

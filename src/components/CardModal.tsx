@@ -8,7 +8,6 @@ import CardActivity from "./CardActivity";
 import CardActions from "./CardActions";
 import { User } from "@/interfaces";
 import { addCardMember } from "@/services/card";
-import Image from "next/image";
 
 interface CardModel {
   id: string;
@@ -50,8 +49,7 @@ const CardModal = ({ id, isModal, setIsModal }: CardModel) => {
                   className="relative after:cursor-pointer after:content-['x'] after:absolute after:right-[-5px] after:top-[-10px] after:bg-purple-500 after:h-4 after:w-4 after:flex after:items-center after:justify-center after:text-white after:rounded-full"
                   onClick={() => removeCardMember(user)}
                 >
-                  <Image
-                    fill
+                  <img
                     src={user.image as string}
                     className="h-7 w-7 rounded-full"
                     alt=""
